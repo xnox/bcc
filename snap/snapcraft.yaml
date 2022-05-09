@@ -25,7 +25,7 @@ plugs:
     system-observe: null
     system-trace: null
 assumes: [snapd2.37]
-base: core18
+base: core22
 adopt-info: bcc
 
 architectures:
@@ -34,7 +34,7 @@ architectures:
     - build-on: arm64
     - build-on: armhf
     - build-on: amd64
-    - build-on: i386
+    - build-on: risv64
 
 parts:
     bcc:
@@ -60,18 +60,17 @@ parts:
             - flex
             - git
             - iperf
-            - libclang-10-dev
+            - libclang-dev
             - libedit-dev
             - libelf-dev
-            - libllvm10
             - libfl-dev
-            - llvm-10-dev
+            - llvm-dev
             - zlib1g-dev
         prime:
             - -usr/share/bcc/tools/doc
             - usr/lib/*/lib*.so*
             - usr/lib/python3
-            - usr/lib/python3.6*
+            - usr/lib/python3.*
             - usr/share/bcc/tools
         after:
           - stage
