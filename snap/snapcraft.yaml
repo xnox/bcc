@@ -60,12 +60,12 @@ parts:
             - flex
             - git
             - iperf
-            - libclang-4.0-dev
+            - libclang-10-dev
             - libedit-dev
             - libelf-dev
-            - libllvm4.0
+            - libllvm10
             - libfl-dev
-            - llvm-4.0-dev
+            - llvm-10-dev
             - zlib1g-dev
         prime:
             - -usr/share/bcc/tools/doc
